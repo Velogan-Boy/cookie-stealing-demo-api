@@ -40,7 +40,8 @@ const authenticate = async (req, res) => {
 
    return res.status(200).json({
       message: 'Authentication Successful',
-      token: token
+      token: token,
+      user: user
    });
 };
 
@@ -75,7 +76,7 @@ const registerUser = async (req, res) => {
       return res.status(500).json({ message: 'Something went wrong' });
    }
 
-   return res.status(201).json({ message: 'Registration Successful', token: createJWT(email) });
+   return res.status(201).json({ message: 'Registration Successful', token: createJWT(email), user: user });
 };
 
 module.exports = {

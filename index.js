@@ -13,7 +13,7 @@ if (process.env.NODE_ENV == 'development') app.use(morgan('dev'));
 app.use('/api', require('./routes'));
 
 app.get('/', (req, res) => {
-   res.send('<h1> CTF Backend Task - Techops Student Director Recruitment  </h1>');
+   res.send('<h1> Cookie Stealing Demo  </h1>');
 });
 
 const port = process.env.PORT || 5000;

@@ -20,6 +20,8 @@ const tokenAuth = async (req, res, next) => {
    }
 
    console.log(result)
+   
+   req.user = result.email;
 
    next();
 };

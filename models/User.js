@@ -19,6 +19,7 @@ const getUser = async (email) => {
 
       return { user, err: null };
    } catch (err) {
+      console.log(err);
       return { user: null, err: err };
    }
 };
